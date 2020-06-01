@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% set base_url %}https://pinkepanke.net/{% endset %}
+    <title>Hausprojekt PinkePanke</title>
+
+    <link rel="stylesheet" href="/css/stylesheet.css" media="screen">
+    <link rel="canonical" href="{% block url %}{{base_url}}{% endblock %}" />
+    <link rel="icon" href="/favicon.ico?v=3" sizes="16x16 32x32 48x48 64x64 128x128" type="image/vnd.microsoft.icon">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+    <meta name="Title" content="Hausprojekt PinkePanke">
+    <meta name="Author" content="Hausprojekt PinkePanke">
+    <meta name="Description" content="{% block description %}Informationen und Neuigkeiten zum Hausprojekt PinkePanke in Berlin-Wedding {% endblock %}">
+    <meta name="Revisit" content="After 15 days">
+    <meta name="Keywords" content="Hausprojekt, Mietsh&auml;user Syndikat, Direktkredite, Berlin, Wedding, Kolonisten, &auml;ltestes Haus, solidarisches Zusammenleben">
+    <meta name="Robots" content="INDEX,FOLLOW">
+    <meta name="content-language" content="de">
+
+    <meta property="og:url" content="{{ self.url() }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{ self.title() }}"/>
+    <meta property="og:description" content="{{self.description()}}" />
+    <meta property="og:image" content="{{base_url}}{% block image %}images/logo.png{% endblock %}" />
+  </head>
+    <body text="#FFFFFF" bgcolor="#000000" onLoad="if (self != top) top.location = self.location">
+      <a name="top"></a>
+      <div class="container">
+
+      <div class="leftplaceholder"></div>
+      <div class="textwindow">
+        {% block content %}{% endblock %}
+      </div> <!--textwindow-->
+
+      {% set page_slug %}
+        {% block slug %}{% endblock %}
+      {% endset %}
+
+      <div class="categories">
+        {% for id, text in NAVIGATION.items() %}
+           <a href="/{{id}}" {% if page_slug == id %}class="active"{% endif %}" >{{ text }}</a>
+        {% endfor %}
+      </div>
+
+      <div class="title"><a href="/" class="none"><img src="images/title.png" border="0" alt="Hausprojekt PinkePanke" /></a></div>
+
+      <div class="lefttree"><img src="images/left_tree.png" border="0" alt="baum" /></div>
+      <div class="righttree"><img src="images/right_tree.png" border="0" alt="baum" /></div>
+
+
+      <div class="clear"></div>
+      </div> <!-- /container -->
+
+      <div class="impressum">
+        <br/>
+        <br/>
+        <a rel="license" href="https://creativecommons.org/licenses/by/3.0/de/" target="_blank">
+        <img alt="Creative Commons License" style="border-width:0" src="/images/cc_licence.png" /></a>
+        <a href="/kontakt">     impressum</a>
+      </div>
+  </body>
+</html>

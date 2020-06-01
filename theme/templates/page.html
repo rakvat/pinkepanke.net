@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block slug %}{{ page.slug }}{% endblock %}
+{% block url %}{{ base_url }}{{ page.slug }}/{% endblock %}
+{% block page %}{{ page.slug }}{% endblock %}
+{% block title %}{{ page.title }}{% endblock %}
+
+{% block content %}
+  {{ page.content }}
+
+  {% if page.slug == 'aktuelles' %}
+    {% for article in articles[0:5] if article.type == 'news' %}
+      <div class="row">
+          <i>{{article.locale_date}}</i> <b>{{article.title}}</b>
+          {{article.content}}
+      </div>
+    {% endfor %}
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block slug %}{{year}}{% endblock %}
+{% block url %}{{ base_url }}/aktuelles/{{year}}/{% endblock %}
+{% block title %}{{ year }}{% endblock %}
+
+{% block content %}
+  {% for article in articles if article.date.year == year %}
+    <div class="row">
+        <i>{{article.locale_date}}</i> <b>{{article.title}}</b>
+        {{article.content}}
+    </div>
+  {% endfor %}
+{% endblock %}

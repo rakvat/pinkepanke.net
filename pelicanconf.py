@@ -23,7 +23,7 @@ ARCHIVES_SAVE_AS = ''
 TAG_SAVE_AS = ''
 TAGS_SAVE_AS = ''
 
-STATIC_PATHS = ['images', 'css']
+STATIC_PATHS = ['images', 'css', 'extra']
 EXTRA_PATH_METADATA = {
     'extra/robots.txt': {'path': 'robots.txt'},
     'extra/favicon.ico': {'path': 'favicon.ico'},

@@ -37,7 +37,7 @@
 
         <div class="categories">
           {% for id, text in NAVIGATION.items() %}
-          <a href="/{{id}}" {% if page_slug == id %}class="active"{% endif %}" >{{ text }}</a>
+          <a href="/{{id}}/" {% if page_slug == id %}class="active"{% endif %}" >{{ text }}</a>
           {% endfor %}
         </div>
 

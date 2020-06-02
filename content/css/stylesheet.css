@@ -23,11 +23,6 @@
         text-decoration:none;
     }
 
-    img {
-        display: block;
-        margin: auto;
-    }
-
     div.container {
         display: flex;
         flex-direction: column;
@@ -42,9 +37,6 @@
         margin-top: 5px;
         margin-left: 35px;
 
-    }
-    div.title img {
-        margin: 0px;
     }
 
     div.categories {
@@ -65,6 +57,11 @@
         width: 511px;
         overflow: visible;
     }
+    div.textwindow img {
+        display: block;
+        margin: 10px auto;
+    }
+
 
     div.yearnav {
         margin-bottom: 20px;

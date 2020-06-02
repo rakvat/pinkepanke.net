@@ -15,7 +15,7 @@
     {% endfor %}
     <div class="yearnav">
       {% for year in years|unique %}
-        <a href="/aktuelles/{{year}}">{{year}}</a>
+        <a href="/aktuelles/{{year}}/">{{year}}</a>
       {% endfor %}
     </div>
     {% for article in articles[0:5] if article.type == 'news' %}
@@ -28,7 +28,7 @@
     <div class="yearnav">
       Mehr Neuigkeiten aus den Jahren<br/>
       {% for year in years|unique %}
-        <a href="/aktuelles/{{year}}">{{year}}</a>
+        <a href="/aktuelles/{{year}}/">{{year}}</a>
       {% endfor %}
     </div>
   {% endif %}

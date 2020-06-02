@@ -2,7 +2,7 @@
         margin: 0;
         padding: 0;
         font: 85% arial, hevetica, sans-serif;
-        text-align: center;
+        text-align: left;
         color: #fff;
         background-color: #092109;
     }
@@ -23,69 +23,33 @@
         text-decoration:none;
     }
 
-    table {
-        padding: 0px;
-        margin: 0px;
-        border: 0px;
-    }
-    tr {
-        padding: 0px;
-        margin: 0px;
-        border: 0px;
-    }
-    td {
-        padding: 0px;
-        margin: 0px;
-        border: 0px;
+    img {
+        display: block;
+        margin: auto;
     }
 
     div.container {
-        position: relative;
-        margin: 0em;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
         width: 1143px;
         min-height: 800px;
         overflow: visible;
-        text-align: left;
-        background: #f7bf1c url("images/vgradient.jpg") 0 0 repeat-x;
-    }
-
-    div.leftplaceholder {
-        float: left;
-        width: 295px;
-        height: 100px;
-    }
-
-    div.textwindow {
-        float: left;
-        margin-top: 170px;
-        color: #000000;
-        width: 511px;
-        overflow: visible;
-    }
-
-    div.lefttree {
-        position: absolute;
-        left:0px;
-        top:247px;
-    }
-    div.righttree {
-        position: absolute;
-        left:962px;
-        top:323px;
+        background: #f7bf1c url("/images/vgradient.jpg") 0 0 repeat-x;
     }
 
     div.title {
-        position:absolute;
-        top:5px;
-        left:35px;
-        width:194px;
-        height:102px;
+        margin-top: 5px;
+        margin-left: 35px;
+
+    }
+    div.title img {
+        margin: 0px;
     }
 
     div.categories {
-        position:absolute;
-        top: 100px;
-        left:60px;
+        margin-top: 10px;
+        margin-left: 55px;
         font-weight:bold;
         font-size:110%;;
     }
@@ -94,35 +58,45 @@
         padding-right: 50px;
     }
 
+    div.textwindow {
+        margin: auto;
+        margin-top: 40px;
+        color: #000000;
+        width: 511px;
+        overflow: visible;
+    }
+
+    div.yearnav {
+        margin-bottom: 20px;
+    }
+    div.yearnav a {
+        margin-right: 5px;
+    }
+
+    div.article {
+        margin-bottom: 60px;
+    }
+
+    div.lefttree {
+        position: absolute;
+        top:247px;
+    }
+    div.righttree {
+        position: absolute;
+        align-self: flex-end;
+        top:323px;
+    }
+
+
     div.impressum {
-        float:right;
+        display: flex;
+        flex-direction: row-reverse;
         color: #fff;
         font-size:smaller;
+        margin: 10px;
     }
     div.impressum a {
         color: #fff;
         text-decoration:none;
-    }
-
-    div.imgr {
-        float:right;
-        padding:2px;
-    }
-
-    div.imgl {
-        float:left;
-        padding:2px;
-    }
-
-    div.alignr{
-        text-align:right;
-    }
-
-    div.clear {
-        clear: both;
-        height:10px;
-    }
-
-    hr.clear {
-        clear: both;
+        margin-left: 10px;
     }

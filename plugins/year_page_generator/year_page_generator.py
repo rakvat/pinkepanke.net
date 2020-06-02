@@ -7,13 +7,13 @@ from codecs import open
 from pelican import signals
 from pelican.generators import Generator
 
-
 class YearPageGenerator(Generator):
 
     def __init__(self, context, settings, path, theme, output_path, *null):
         self.output_path = output_path
         self.context = context
         self.siteurl = settings.get('SITEURL')
+        self.settings = settings
         self.aktuelles_path = f'{self.output_path}/aktuelles'
         super().__init__(context, settings, path, theme, output_path)
 
@@ -27,6 +27,7 @@ class YearPageGenerator(Generator):
 
     def generate_context(self):
         self.context['year'] = None
+        self.context['years'] = []
 
     def generate_output(self, writer):
         years = self._get_years()
@@ -36,7 +37,7 @@ class YearPageGenerator(Generator):
             path = path / 'index.html'
             info(f'writing {path}')
             template = self.get_template('year')
-            writer.write_file(path, template, self.context, year=year)
+            writer.write_file(path, template, self.context, year=year, years=years)
 
 
 def get_generators(generators):

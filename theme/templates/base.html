@@ -29,36 +29,31 @@
       <a name="top"></a>
       <div class="container">
 
-      <div class="leftplaceholder"></div>
-      <div class="textwindow">
-        {% block content %}{% endblock %}
-      </div> <!--textwindow-->
+        {% set page_slug %}
+          {% block slug %}{% endblock %}
+        {% endset %}
 
-      {% set page_slug %}
-        {% block slug %}{% endblock %}
-      {% endset %}
+        <div class="title"><a href="/" class="none"><img src="/images/title.png" border="0" alt="Hausprojekt PinkePanke" /></a></div>
 
-      <div class="categories">
-        {% for id, text in NAVIGATION.items() %}
-           <a href="/{{id}}" {% if page_slug == id %}class="active"{% endif %}" >{{ text }}</a>
-        {% endfor %}
-      </div>
+        <div class="categories">
+          {% for id, text in NAVIGATION.items() %}
+          <a href="/{{id}}" {% if page_slug == id %}class="active"{% endif %}" >{{ text }}</a>
+          {% endfor %}
+        </div>
 
-      <div class="title"><a href="/" class="none"><img src="images/title.png" border="0" alt="Hausprojekt PinkePanke" /></a></div>
-
-      <div class="lefttree"><img src="images/left_tree.png" border="0" alt="baum" /></div>
-      <div class="righttree"><img src="images/right_tree.png" border="0" alt="baum" /></div>
+        <div class="textwindow">
+          {% block content %}{% endblock %}
+        </div> <!--textwindow-->
 
 
-      <div class="clear"></div>
+        <div class="lefttree"><img src="/images/left_tree.png" border="0" alt="baum" /></div>
+        <div class="righttree"><img src="/images/right_tree.png" border="0" alt="baum" /></div>
       </div> <!-- /container -->
 
       <div class="impressum">
-        <br/>
-        <br/>
         <a rel="license" href="https://creativecommons.org/licenses/by/3.0/de/" target="_blank">
-        <img alt="Creative Commons License" style="border-width:0" src="/images/cc_licence.png" /></a>
-        <a href="/kontakt">     impressum</a>
+          <img alt="Creative Commons License" style="border-width:0" src="/images/cc_licence.png" /></a>
+        <a href="/kontakt">impressum</a>
       </div>
-  </body>
+    </body>
 </html>

@@ -9,11 +9,27 @@
   {{ page.content }}
 
   {% if page.slug == 'aktuelles' %}
+    {% set years = [] %}
+    {% for article in articles if article.type == 'news' %}
+    {% set years = years.append(article.date.year) %}
+    {% endfor %}
+    <div class="yearnav">
+      {% for year in years|unique %}
+        <a href="/aktuelles/{{year}}">{{year}}</a>
+      {% endfor %}
+    </div>
     {% for article in articles[0:5] if article.type == 'news' %}
-      <div class="row">
+      <div class="article">
           <i>{{article.locale_date}}</i> <b>{{article.title}}</b>
           {{article.content}}
       </div>
     {% endfor %}
+
+    <div class="yearnav">
+      Mehr Neuigkeiten aus den Jahren<br/>
+      {% for year in years|unique %}
+        <a href="/aktuelles/{{year}}">{{year}}</a>
+      {% endfor %}
+    </div>
   {% endif %}
 {% endblock %}

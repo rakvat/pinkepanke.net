@@ -1,99 +1,117 @@
-    body {
-        margin: 0;
-        padding: 0;
-        font: 85% arial, hevetica, sans-serif;
-        text-align: left;
-        color: #fff;
-        background-color: #092109;
-    }
+body {
+    margin: 0;
+    padding: 0;
+    font: 100% arial, hevetica, sans-serif;
+    text-align: left;
+    color: #fff;
+    background-color: #092109;
+}
 
-    a:link {
-        font-weight: bold;
-        color: #092109;
-    }
-    a:visited {
-        font-weight: bold;
-        color: #000000;
-    }
-    a:hover, a:active, a.active {
-        font-weight: bold;
-        color: #ff006f;
-    }
-    a.none {
-        text-decoration:none;
-    }
+a:link {
+    font-weight: bold;
+    color: #092109;
+}
+a:visited {
+    font-weight: bold;
+    color: #000000;
+}
+a:hover, a:active, a.active {
+    font-weight: bold;
+    color: #ff006f;
+}
+a.none {
+    text-decoration:none;
+}
 
-    div.container {
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-        width: 1143px;
-        min-height: 800px;
-        overflow: visible;
-        background: #f7bf1c url("/images/vgradient.jpg") 0 0 repeat-x;
-    }
+div.container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    min-height: 800px;
+    overflow: visible;
+    background: #f7bf1c url("/images/vgradient.jpg") 0 0 repeat-x;
+}
 
-    div.title {
-        margin-top: 5px;
-        margin-left: 35px;
+div.title {
+    margin-top: 5px;
+    margin-left: 35px;
 
-    }
+}
 
-    div.categories {
-        margin-top: 10px;
-        margin-left: 55px;
-        font-weight:bold;
-        font-size:110%;;
-    }
-    div.categories a {
-        text-decoration: none;
-        padding-right: 50px;
-    }
+div.categories {
+    margin-top: 10px;
+    margin-left: 55px;
+    font-weight:bold;
+    font-size: 110%;
+}
+div.categories a {
+    text-decoration: none;
+    padding-right: 50px;
+}
 
-    div.textwindow {
-        margin: auto;
-        margin-top: 40px;
-        color: #000000;
-        width: 511px;
-        overflow: visible;
-    }
-    div.textwindow img {
-        display: block;
-        margin: 10px auto;
-    }
-
-
-    div.yearnav {
-        margin-bottom: 20px;
-    }
-    div.yearnav a {
-        margin-right: 5px;
-    }
-
-    div.article {
-        margin-bottom: 60px;
-    }
-
-    div.lefttree {
-        position: absolute;
-        top:247px;
-    }
-    div.righttree {
-        position: absolute;
-        align-self: flex-end;
-        top:323px;
-    }
+div.textwindow-wrapper {
+  margin: 0 10px;
+}
+div.textwindow {
+    margin: auto;
+    margin-top: 40px;
+    color: #000000;
+    width: 480px;
+    overflow: hidden;
+}
+div.textwindow img {
+    display: block;
+    margin: 10px auto;
+    object-fit: scale-down;
+}
 
 
-    div.impressum {
-        display: flex;
-        flex-direction: row-reverse;
-        color: #fff;
-        font-size:smaller;
-        margin: 10px;
-    }
-    div.impressum a {
-        color: #fff;
-        text-decoration:none;
-        margin-left: 10px;
-    }
+div.yearnav {
+    margin-bottom: 20px;
+    font-size: 90%;
+}
+div.yearnav a {
+    margin-right: 5px;
+}
+
+div.article {
+    margin-bottom: 60px;
+}
+
+div.lefttree {
+    position: absolute;
+    top:247px;
+}
+div.righttree {
+    position: absolute;
+    align-self: flex-end;
+    top:323px;
+}
+
+
+div.impressum {
+    display: flex;
+    flex-direction: row-reverse;
+    color: #fff;
+    font-size: smaller;
+    margin: 10px;
+}
+div.impressum a {
+    color: #fff;
+    text-decoration:none;
+    margin-left: 10px;
+}
+
+@media (max-width: 1000px) {
+  div.lefttree {
+    display: none;
+  }
+  div.righttree {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  div.textwindow {
+    width: 100%;
+  }
+}

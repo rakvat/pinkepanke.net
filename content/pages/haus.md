@@ -21,7 +21,7 @@ Im Mietshaus haben wir von Dach bis Keller alles saniert und so 12 Räume zum Le
 
 ##### Gartenhaus
 
-Das Gartenhaus (Fabrikgebäude) liegt lang gestreckt im Hof. Bei Kauf war es leider sehr stark zerfallen. Dach und Zwischendecke waren kaputt. (Wir haben gehört, dass es schon in den 70ern durchgeregnet haben soll...) Heute ist es mit Dämmung, neuen Fenstern, Solorkollektoren und Lüftungsanlage zum Niedrigenergiehaus geworden.<br/>
+Das Gartenhaus (Fabrikgebäude) liegt lang gestreckt im Hof. Bei Kauf war es leider sehr stark zerfallen. Dach und Zwischendecke waren kaputt. (Wir haben gehört, dass es schon in den 70ern durchgeregnet haben soll...) Heute ist es mit Dämmung, neuen Fenstern, Solarkollektoren und Lüftungsanlage zum Niedrigenergiehaus geworden.<br/>
 
 <img src="/images/gartenhaus.png" alt="gartenhaus"/><br/> <br/>
 <img src="/images/gartenhaus_saniert.png" alt="gartenhaus_saniert"/><br/>
